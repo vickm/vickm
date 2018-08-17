@@ -39,6 +39,9 @@ Plugin 'tpope/vim-unimpaired'
 " surround
 Plugin 'tpope/vim-surround'
 
+" easymotion
+Plugin 'easymotion/vim-easymotion'
+
 " All Plugins must be added before this line
 call vundle#end()
 filetype plugin indent on
@@ -72,3 +75,7 @@ endif
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 nnoremap \ :Ag<SPACE>
+
+" map leader to space
+nnoremap <SPACE> <Nop>
+let mapleader="\<Space>"
