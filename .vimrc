@@ -13,13 +13,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " added nerdtree
 Plugin 'scrooloose/nerdtree'
 
 " add PowerLine
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Add ctrl-p
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -38,6 +40,9 @@ Plugin 'tpope/vim-unimpaired'
 
 " surround
 Plugin 'tpope/vim-surround'
+
+" fugitive
+Plugin 'tpope/vim-fugitive'
 
 " easymotion
 Plugin 'easymotion/vim-easymotion'
@@ -79,3 +84,10 @@ nnoremap \ :Ag<SPACE>
 " map leader to space
 nnoremap <SPACE> <Nop>
 let mapleader="\<Space>"
+
+" highlight the current line
+set cursorline
+
+let g:airline_theme = 'wombat'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
